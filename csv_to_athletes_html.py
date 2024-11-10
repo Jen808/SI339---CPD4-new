@@ -66,8 +66,8 @@ def gen_athlete_page(data, outfile):
    
    <div class="main-header">
       <div class="name">
-         <img src="\logo.jpg" class="logo-img" alt="skyline highschool athlete logo" tabindex="0">
-         <a href="\index.html" class="logo" tabindex="0">Skyline CrossCountry</a>
+         <img src="../logo.jpg" class="logo-img" alt="skyline highschool athlete logo" tabindex="0">
+         <a href="../index.html" class="logo" tabindex="0">Skyline CrossCountry</a>
       </div>
 
       <div class="toggle-menu" id="toggle-menu" tabindex="0">
@@ -78,10 +78,10 @@ def gen_athlete_page(data, outfile):
 
       <div class="hidden-nav">
          <ul>
-            <li><a href="\index.html" tabindex="0">Home Page</a></li>
-            <li><a href="\mens.html" tabindex="0">Men's Team</a></li>
-            <li><a href="\womens.html" tabindex="0">Women's Team</a></li>
-            <li><a href="\meets.html" tabindex="0">Meets</a></li>
+            <li><a href="../index.html" tabindex="0">Home Page</a></li>
+            <li><a href="../mens.html" tabindex="0">Men's Team</a></li>
+            <li><a href="../womens.html" tabindex="0">Women's Team</a></li>
+            <li><a href="../meets.html" tabindex="0">Meets</a></li>
          </ul>
 
       </div>
@@ -93,10 +93,10 @@ def gen_athlete_page(data, outfile):
 
    <nav id="navbar">
       <ul>
-         <li><a href="\index.html" tabindex="0">Home Page</a></li>
-         <li><a href="\mens.html" tabindex="0">Men's Team</a></li>
-         <li><a href="\womens.html" tabindex="0">Women's Team</a></li>
-         <li><a href="\meets.html" tabindex="0">Meets</a></li>
+         <li><a href="../index.html" tabindex="0">Home Page</a></li>
+         <li><a href="../mens.html" tabindex="0">Men's Team</a></li>
+         <li><a href="../womens.html" tabindex="0">Women's Team</a></li>
+         <li><a href="../meets.html" tabindex="0">Meets</a></li>
       </ul>
    </nav>
    
