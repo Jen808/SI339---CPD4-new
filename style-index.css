@@ -1,0 +1,859 @@
+/* =====================================================
+Import
+===================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* =====================================================
+Default color set
+===================================================== */
+
+:root {
+
+    --color-colombia-blue: #9BDDFF;
+    --color-dark: #213A57;
+    --color-medium: #0B6477;
+    --color-background: #DCF5FA;
+    --color-background-deep: #F0FCFE;
+    --color-hover: #04A0BC;
+    --color-green: #25A18E;
+    --color-lightgreen: #7AE582;
+    --color-blue: #00A5CF;
+
+
+    --color-darkmode-grey: #2D2D2D;
+    --color-darkmode-deepblue: #37393d;
+    --color-darkmode-dark-grey: #1a1a1a;
+    --color-darkmode-mid-grey: #242424;
+    --color-darkmode-header: #4a4a4a;
+    --color-darkmode-light-grey: #666666;
+    --color-darkmode-green: #43bfac;
+    --color-darkmode-blue: #22beda;
+
+}
+
+
+/* =====================================================
+Screen setting - Default: Light Mode
+===================================================== */
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFF;
+        background-color: var(--color-darkmode-grey);
+
+    }
+
+}
+
+
+@media (prefers-contrast: more) {
+    body {
+        background-color: #FFF;
+        color: #000;
+    }
+
+
+}
+
+
+@media (prefers-reduced-motion) {}
+
+
+
+
+/* =====================================================
+Screen setting - Default: Light Mode
+===================================================== */
+
+.mens-team,
+.womens-team,
+.meets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-background-deep);
+}
+
+
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--color-dark);
+    color: #FFF;
+    width: 100%;
+    padding: 20px 0;
+    animation: slideInDown 0.5s ease-in;
+
+}
+
+
+
+.button {
+    width: 100%;
+}
+
+
+.meets a,
+.womens-team a,
+.mens-team a {
+    text-wrap: wrap;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--color-dark);
+    width: 80%;
+    font-weight: 600;
+    padding: 20px 10%;
+}
+
+.meets a:hover,
+.womens-team a:hover,
+.mens-team a:hover {
+
+    color: var(--color-hover);
+
+}
+
+
+a {
+    text-align: center;
+}
+
+
+.button:nth-child(even) {
+    background-color: var(--color-background);
+}
+
+.home {
+    text-align: center;
+    width: 100vw;
+    font-weight: 800;
+    color: var(--color-dark);
+    padding-top: 10vh;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+
+
+}
+
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+    gap: 5vw;
+
+}
+
+#button-main {
+    background-color: var(--color-dark);
+    color: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    width: 50vw;
+    padding: 5vw;
+    border-radius: 30vw;
+    animation: fadeInDown 1s ease-in;
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .mens-team,
+    .womens-team,
+    .meets {
+        background-color: var(--color-darkmode-grey);
+    }
+
+
+
+    .title {
+
+        background-color: var(--color-colombia-blue);
+        color: var(--color-dark);
+
+    }
+
+
+
+    .meets a,
+    .womens-team a,
+    .mens-team a {
+
+        color: var(--color-background-deep);
+
+    }
+
+    .meets a:hover,
+    .womens-team a:hover,
+    .mens-team a:hover {
+
+        color: var(--color-colombia-blue);
+
+    }
+
+
+
+
+    .button:nth-child(even) {
+        background-color: var(--color-darkmode-header);
+    }
+
+    .home {
+
+        color: var(--color-dark);
+    }
+
+
+    #button-main {
+        background-color: var(--color-dark);
+    }
+
+}
+
+
+@media (prefers-contrast: more) {
+
+    .mens-team,
+    .womens-team,
+    .meets {
+        background-color: #FFF;
+    }
+
+
+
+    .title {
+
+        background-color: #000;
+        color: #FFF;
+
+    }
+
+
+
+    .meets a,
+    .womens-team a,
+    .mens-team a {
+
+        color: #000;
+
+    }
+
+
+    .meets a:hover,
+    .womens-team a:hover,
+    .mens-team a:hover {
+
+        color: blue;
+
+    }
+
+    .button {
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+
+    }
+
+
+
+
+
+    .home {
+
+        color: var(--color-dark);
+    }
+
+    .button:nth-child(even) {
+        background-color: #FFF;
+    }
+
+
+    .button {
+        background-color: #FFF;
+    }
+
+
+}
+
+
+@media (prefers-reduced-motion) {
+
+    #button-main,
+    .title {
+        animation: none;
+    }
+}
+
+
+
+
+
+
+
+
+/* =====================================================
+Navigation
+===================================================== */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 3em;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: var(--color-colombia-blue);
+    height: 3em;
+    align-items: center;
+
+
+}
+
+nav ul li a {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--color-hover);
+}
+
+nav {
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    height: 3.5em;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0.4em 0;
+}
+
+nav ul li a {
+    font-size: 0.8rem;
+
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    nav ul {
+        background-color: var(--color-darkmode-grey);
+
+    }
+
+    nav ul li a {
+        color: var(--color-background-deep);
+    }
+
+    nav ul li a:hover {
+        color: var(--color-colombia-blue);
+    }
+
+
+
+}
+
+
+@media (prefers-contrast: more) {
+    nav ul {
+        background-color: #FFF;
+    }
+
+    nav ul li a {
+        color: #000;
+    }
+
+    nav ul li a:hover {
+        color: blue;
+    }
+
+}
+
+
+
+
+/* =====================================================
+Footer 
+===================================================== */
+
+footer {
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px 0 !important;
+    font-size: 1rem;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.8em;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+footer a {
+    color: var(--color-medium);
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+footer address {
+    line-height: 1.4em !important;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+footer a:hover {
+    color: var(--color-hover);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    footer {
+        background-color: var(--color-darkmode-dark-grey);
+        color: var(--color-colombia-blue);
+
+    }
+
+
+    footer a {
+        color: #FFF;
+    }
+
+
+    footer a:hover {
+        color: var(--color-hover);
+    }
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    footer {
+        background-color: #000;
+        color: #FFF;
+    }
+
+
+    footer a {
+        color: #FFF
+    }
+
+
+    footer a:hover {
+        color: blue;
+    }
+
+}
+
+
+
+
+/* =====================================================
+Burger Menu
+===================================================== */
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-dark);
+}
+
+.logo li {
+    list-style: none;
+}
+
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.toggle-menu span {
+    height: 3px;
+    width: 35px;
+    background-color: var(--color-dark);
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+.toggle-menu.active .line1 {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.toggle-menu.active .line2 {
+    opacity: 0;
+}
+
+.toggle-menu.active .line3 {
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+}
+
+nav {
+    background-color: var(--color-background);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 15px;
+    height: 100%;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#navbar {
+    display: none;
+}
+
+.hidden-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+}
+
+.hidden-nav ul li {
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.hidden-nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.hidden-nav ul li a:hover {
+
+    color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+
+
+    .main-header {
+        padding: 20px;
+        height: 40px;
+    }
+
+
+    .toggle-menu {
+        display: flex;
+    }
+
+    .hidden-nav {
+        display: none;
+    }
+
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-background);
+        padding-top: 10px;
+
+    }
+
+    #navbar.active {
+        display: flex;
+        position: sticky;
+        top: 80px;
+        animation: slideInRight 0.5s ease-in-out;
+        z-index: 150;
+        padding-top: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 90%;
+        padding: 15px 0px;
+        border-top: 1px solid var(--color-blue);
+    }
+
+    nav ul li:first-child {
+        border: none;
+
+    }
+
+    nav ul li a {
+        color: var(--color-dark);
+        font-weight: 500;
+    }
+
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .main-header {
+        background-color: #333;
+        color: white;
+
+    }
+
+
+
+    .logo {
+        color: var(--color-colombia-blue);
+    }
+
+
+    .toggle-menu span {
+        background-color: white;
+    }
+
+
+
+    nav {
+        background-color: #333;
+    }
+
+
+
+    nav ul li a {
+        color: white;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #FFF;
+    }
+
+    .hidden-nav ul li a:hover {
+
+        color: var(--color-colombia-blue);
+    }
+
+
+    .logo-img {
+        border: 1px solid #FFF;
+    }
+
+
+    @media (max-width: 768px) {
+
+
+        nav {
+
+            background-color: var(--color-darkmode-grey);
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid var(--color-darkmode-light-grey);
+        }
+
+
+        nav ul li a {
+            color: var(--color-background-deep);
+        }
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+
+
+    .main-header {
+        background-color: #FFF;
+        color: #000;
+        border-bottom: 3px solid #000;
+    }
+
+
+
+    .logo {
+        color: #000;
+    }
+
+
+    .toggle-menu span {
+        background-color: #000;
+    }
+
+
+
+    nav {
+        background-color: #FFF;
+    }
+
+
+
+    nav ul li a {
+        color: #000;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #000;
+    }
+
+    @media (max-width: 768px) {
+
+        header {
+            top: 83px;
+        }
+
+        nav {
+
+            background-color: #000;
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid #FFF;
+        }
+
+
+        nav ul li a {
+            color: #FFF;
+
+        }
+
+
+        nav ul li a:hover {
+            color: yellow;
+
+        }
+
+
+
+    }
+
+
+
+}
+
+
+/* =====================================================
+Reduce Motion
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+}
+

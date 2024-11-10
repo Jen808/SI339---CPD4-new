@@ -1,0 +1,778 @@
+/* =====================================================
+Import
+===================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* =====================================================
+Default color set
+===================================================== */
+
+:root {
+
+    --color-colombia-blue: #9BDDFF;
+    --color-dark: #213A57;
+    --color-medium: #0B6477;
+    --color-background: #DCF5FA;
+    --color-background-deep: #F0FCFE;
+    --color-hover: #04A0BC;
+    --color-green: #25A18E;
+    --color-lightgreen: #7AE582;
+    --color-blue: #00A5CF;
+
+
+    --color-darkmode-grey: #2D2D2D;
+    --color-darkmode-deepblue: #37393d;
+    --color-darkmode-dark-grey: #1a1a1a;
+    --color-darkmode-mid-grey: #242424;
+    --color-darkmode-header: #4a4a4a;
+    --color-darkmode-light-grey: #666666;
+    --color-darkmode-green: #43bfac;
+    --color-darkmode-blue: #22beda;
+
+}
+
+
+/* =====================================================
+Default color set
+===================================================== */
+
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        color: #FFF;
+        background-color: var(--color-darkmode-mid-grey);
+    }
+
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    body {
+        color: #000;
+        background-color: #FFF;
+    }
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+Header
+===================================================== */
+
+/* .name {
+    width: 100%;
+    height: 12vh;
+    background-color: var(--color-colombia-blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+/* .logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin: 0 25px;
+}
+
+.logo {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.main-menu {
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .name {
+        background-color: #333;
+    }
+
+    .logo {
+        color: var(--color-colombia-blue);
+    }
+
+    .logo-img {
+        border: 1px solid #FFF;
+    }
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+
+    .name {
+        background-color: #FFF;
+    }
+
+    .logo {
+        color: #000;
+    }
+
+    .logo-img {
+        border: 1px solid #000;
+    }
+
+
+}
+
+
+ */
+
+
+
+/* =====================================================
+Main
+===================================================== */
+.wel {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    padding-top: 150px;
+    line-height: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 50px;
+    animation: backInDown 1s ease-in;
+}
+
+.button-main {
+    padding: 30px;
+    border-radius: 50px;
+    background-color: var(--color-dark);
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    width: 150px;
+    text-align: center;
+}
+
+.button-main:hover {
+    background-color: var(--color-hover);
+    /* color: var(--color-hover); */
+
+}
+
+
+@media (max-width: 756px) {
+
+    .wel {
+        padding-top: 50px;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        gap: 30px;
+    }
+
+
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    .button-main {
+        background-color: var(--color-background);
+        color: var(--color-dark);
+    }
+
+    .button-main:hover {
+        background-color: var(--color-colombia-blue);
+    }
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    .button-main {
+
+        background-color: #000;
+        color: #FFF;
+
+    }
+
+    .button-main:hover {
+        background-color: #000;
+        color: yellow;
+
+    }
+
+
+
+
+}
+
+
+
+
+
+/* =====================================================
+Footer 
+===================================================== */
+
+footer {
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px 0 !important;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-top: 25vh;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.8em;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+footer a {
+    color: var(--color-medium);
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+footer address {
+    line-height: 1.4em !important;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+footer a:hover {
+    color: var(--color-hover);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    footer {
+        background-color: var(--color-darkmode-dark-grey);
+        color: var(--color-colombia-blue);
+
+    }
+
+
+    footer a {
+        color: #FFF;
+    }
+
+
+    footer a:hover {
+        color: var(--color-hover);
+    }
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    footer {
+        background-color: #000;
+        color: #FFF;
+    }
+
+
+    footer a {
+        color: #FFF
+    }
+
+
+    footer a:hover {
+        color: blue;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    footer {
+        position: relative !important;
+        margin-top: 6vh !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+Burger Menu
+===================================================== */
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    position: sticky;
+    top: 0;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-dark);
+}
+
+.logo li {
+    list-style: none;
+}
+
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.toggle-menu span {
+    height: 3px;
+    width: 35px;
+    background-color: var(--color-dark);
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+.toggle-menu.active .line1 {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.toggle-menu.active .line2 {
+    opacity: 0;
+}
+
+.toggle-menu.active .line3 {
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+}
+
+nav {
+    background-color: var(--color-background);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 15px;
+}
+
+nav ul li {
+    padding: 15px 20px;
+    width: 90%;
+
+
+
+
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+#navbar {
+    display: none;
+}
+
+.hidden-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+}
+
+.hidden-nav ul li {
+    text-decoration: none;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+
+
+}
+
+.hidden-nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.hidden-nav ul li a:hover {
+
+    color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+
+
+    .main-header {
+        padding: 20px;
+        height: 40px;
+    }
+
+
+    .toggle-menu {
+        display: flex;
+    }
+
+    .hidden-nav {
+        display: none;
+    }
+
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #FFF;
+        padding-top: 10px;
+
+    }
+
+    #navbar.active {
+        display: flex;
+        position: sticky;
+        top: 80px;
+        animation: slideInRight 0.5s ease-in-out;
+        z-index: 150;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid var(--color-blue);
+        width: 90%;
+    }
+
+    nav ul li:first-child {
+        border: none;
+
+    }
+
+    nav ul li a {
+        color: var(--color-dark);
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .main-header {
+        background-color: #333;
+        color: white;
+
+    }
+
+
+
+    .logo {
+        color: var(--color-colombia-blue);
+    }
+
+
+    .toggle-menu span {
+        background-color: white;
+    }
+
+
+
+    nav {
+        background-color: #333;
+    }
+
+
+
+
+    nav ul li a {
+        color: var(--color-background-deep);
+
+    }
+
+    nav ul li a:hover {
+        color: var(--color-colombia-blue);
+
+    }
+
+
+    .hidden-nav ul li a {
+        color: #FFF;
+    }
+
+    .hidden-nav ul li a:hover {
+
+        color: var(--color-colombia-blue);
+    }
+
+
+    .logo-img {
+        border: 1px solid #FFF;
+    }
+
+
+    @media (max-width: 768px) {
+
+
+        nav {
+
+            background-color: var(--color-darkmode-grey) !important;
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid var(--color-darkmode-light-grey);
+        }
+
+
+        nav ul li a {
+            color: var(--color-background-deep);
+        }
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+
+
+    .main-header {
+        background-color: #FFF;
+        color: #000;
+        border-bottom: 3px solid #000;
+    }
+
+
+
+    .logo {
+        color: #000;
+    }
+
+
+    .toggle-menu span {
+        background-color: #000;
+    }
+
+
+
+    nav {
+        background-color: #FFF;
+    }
+
+
+
+    nav ul li a {
+        color: #000;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #000;
+    }
+
+    .hidden-nav ul li a:hover {
+        color: blue;
+
+    }
+
+    @media (max-width: 768px) {
+
+        header {
+            top: 83px;
+        }
+
+        nav {
+
+            background-color: #000 !important;
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid #FFF;
+        }
+
+
+        nav ul li a {
+            color: #FFF;
+
+        }
+
+
+        nav ul li a:hover {
+            color: yellow;
+
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+Reduce Motion
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .wel,
+    .main-menu,
+    #navbar.active {
+        animation: none;
+        transition: none;
+    }
+
+
+}
+
+
+
+
+
+/* =====================================================
+tabindex
+===================================================== */
+
+/* [tabindex]:focus {
+    outline: 3px solid red;
+    border-radius: 100px;
+
+} */

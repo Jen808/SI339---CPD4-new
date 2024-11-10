@@ -1,0 +1,1105 @@
+/* =====================================================
+Import
+===================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* =====================================================
+Default color set
+===================================================== */
+
+:root {
+
+    --color-colombia-blue: #9BDDFF;
+
+
+    --color-dark: #213A57;
+    --color-medium: #0B6477;
+    --color-background: #DCF5FA;
+    --color-background-deep: #F0FCFE;
+    --color-hover: #04A0BC;
+    --color-green: #25A18E;
+    --color-lightgreen: #7AE582;
+    --color-blue: #00A5CF;
+
+
+    --color-darkmode-grey: #2D2D2D;
+    --color-darkmode-deepblue: #37393d;
+    --color-darkmode-dark-grey: #1a1a1a;
+    --color-darkmode-mid-grey: #242424;
+    --color-darkmode-header: #4a4a4a;
+    --color-darkmode-light-grey: #666666;
+    --color-darkmode-green: #43bfac;
+    --color-darkmode-blue: #22beda;
+
+}
+
+
+/* =====================================================
+Screen setting - Default: Light Mode
+===================================================== */
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    body {
+        color: #FFF;
+        background-color: var(--color-darkmode-grey);
+
+    }
+}
+
+
+@media (prefers-contrast: more) {
+    body {
+        background-color: #FFF;
+        color: #000;
+    }
+
+}
+
+
+
+
+
+
+/* =====================================================
+Link
+===================================================== */
+a {
+    color: var(--color-medium);
+    text-wrap: wrap;
+    text-decoration: underline;
+    line-height: 1.4em;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    color: var(--color-hover);
+}
+
+a[href="#main"] {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+}
+
+a[href="#main"]:focus {
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: var(--color-blue);
+    }
+
+    a:hover,
+    a:focus {
+        color: var(--color-colombia-blue);
+    }
+}
+
+
+@media (prefers-contrast: more) {
+    a {
+        color: rgb(0, 0, 117);
+    }
+
+    a:hover,
+    a:focus {
+        color: rgb(0, 0, 200);
+    }
+
+
+}
+
+
+
+
+/* =====================================================
+Navigation
+===================================================== */
+/* 
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 3em;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: var(--color-colombia-blue);
+    height: 3em;
+    align-items: center;
+
+
+}
+
+nav ul li a {
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: var(--color-hover);
+}
+
+
+nav {
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    height: 3.5em;
+}
+
+nav ul li {
+    padding: 0.4em 0;
+}
+
+nav ul li a {
+    font-size: 0.8rem;
+
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    nav ul {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+    nav ul li a {
+        color: var(--color-colombia-blue);
+    }
+
+    nav ul li a:hover {
+        color: var(--color-hover);
+    }
+
+
+
+}
+
+
+@media (prefers-contrast: more) {
+    nav ul {
+        background-color: #000;
+    }
+
+    nav ul li a {
+        color: #FFF;
+    }
+
+    nav ul li a:hover {
+        color: blue
+    }
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+Header
+===================================================== */
+
+header {
+    width: auto;
+    height: auto;
+    padding: 2em 0;
+    position: sticky;
+    top: 120px;
+    background-color: #FFF;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInDown 1s ease-in-out;
+
+}
+
+header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    text-align: center;
+}
+
+header img {
+    width: 10em;
+    height: auto;
+    border-radius: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        top: 80px;
+        padding: 1em 0;
+    }
+
+
+    header h1 {
+        margin-bottom: 0.5em;
+    }
+
+    header img {
+        width: 5em;
+        border-radius: 0.6em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+    header {
+        background-color: var(--color-darkmode-header);
+    }
+
+    header h1 {
+        color: #FFF;
+    }
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    header {
+        background-color: #FFF;
+    }
+
+    header h1 {
+        color: #000;
+    }
+
+}
+
+
+
+
+
+
+/* =====================================================
+Main Content 
+===================================================== */
+
+main {
+    padding: 50px;
+}
+
+main h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.4em 0em;
+    animation: slideInLeft 1s ease-in-out;
+
+
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+}
+
+
+
+
+
+
+/* =====================================================
+Tables 
+===================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    table-layout: fixed;
+    animation: fadeIn 1s ease-in;
+
+
+}
+
+thead tr {
+    background-color: var(--color-dark);
+    color: var(--color-colombia-blue);
+}
+
+tbody tr {
+    background-color: #FFF;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--color-background-deep);
+}
+
+tbody td:nth-child(4) {
+    font-style: italic;
+    font-weight: 400;
+}
+
+tbody td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-wrap: wrap !important;
+    font-weight: 500;
+}
+
+
+thead th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-wrap: wrap !important;
+    font-weight: 500;
+
+
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 1em;
+    }
+
+    thead tr {
+        padding: 1em;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+
+    }
+
+
+    tbody td {
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+        justify-content: flex-start;
+
+    }
+
+    thead th {
+        border: 0;
+        border-bottom: 1px solid var(--color-colombia-blue);
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+
+    tbody td:last-child,
+    thead th:last-child {
+        border-bottom: none;
+    }
+
+    main h2 {
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+
+    thead tr,
+    tbody tr,
+    .result-row {
+        border-radius: 1em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+}
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    thead tr {
+        background-color: var(--color-darkmode-light-grey);
+        border: 1px solid var(--color-darkmode-light-grey);
+        color: #FFF;
+    }
+
+    thead th {
+        border-bottom: 1px solid #FFF;
+    }
+
+
+    tbody tr {
+        background-color: var(--color-darkmode-dark-grey);
+        border: 1px solid var(--color-darkmode-header);
+        color: #FFF;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--color-darkmode-mid-grey);
+    }
+
+    tbody td {
+        border-bottom: 1px solid var(--color-darkmode-header);
+        border: 1px solid var(--color-darkmode-header);
+    }
+
+    main h2 {
+        color: var(--color-colombia-blue);
+    }
+
+
+    tbody td {
+        border: 0;
+        border-bottom: 1px solid var(--color-darkmode-header);
+    }
+
+
+
+}
+
+
+@media (prefers-contrast: more) {
+    thead tr {
+        background-color: #000;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    thead th {
+
+        border-bottom: 1px solid #fff;
+    }
+
+
+    tbody tr {
+        background-color: #FFF;
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #FFF;
+    }
+
+    tbody td {
+        border-bottom: 1px solid #000;
+        border: 1px solid #000;
+    }
+
+    main h2 {
+        color: #000;
+    }
+
+    @media (max-width: 768px) {
+        tbody td {
+            border: 0;
+            border-bottom: 1px solid #000;
+        }
+    }
+
+    tbody td {
+        border: 0;
+        border-bottom: 1px solid #000;
+    }
+
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+Footer 
+===================================================== */
+
+footer {
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.8em;
+}
+
+footer a {
+    color: var(--color-medium);
+    font-weight: 500;
+}
+
+footer address {
+    line-height: 1.4em !important;
+
+}
+
+footer a:hover {
+    color: var(--color-hover);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    footer {
+        background-color: var(--color-darkmode-dark-grey);
+        color: var(--color-colombia-blue);
+
+    }
+
+
+    footer a {
+        color: #FFF;
+    }
+
+
+    footer a:hover {
+        color: var(--color-hover);
+    }
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    footer {
+        background-color: #000;
+        color: #FFF;
+    }
+
+
+    footer a {
+        color: #FFF
+    }
+
+
+    footer a:hover {
+        color: blue;
+    }
+
+}
+
+
+
+
+
+
+
+/* =====================================================
+FAB Icon
+===================================================== */
+
+
+body::before {
+    content: "\f002";
+    font-family: 'FontAwesome';
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+body::after {
+    content: "\f0b0";
+    font-family: 'FontAwesome';
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (prefers-contrast: more) {
+    body::before {
+        background-color: #000;
+        color: white;
+        border: 1px solid #FFF;
+    }
+
+    body::after {
+        background-color: #000;
+        color: white;
+        border: 1px solid #FFF;
+    }
+
+
+}
+
+
+
+
+
+/* =====================================================
+Burger Menu
+===================================================== */
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-dark);
+}
+
+.logo li {
+    list-style: none;
+}
+
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.toggle-menu span {
+    height: 3px;
+    width: 35px;
+    background-color: var(--color-dark);
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+.toggle-menu.active .line1 {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.toggle-menu.active .line2 {
+    opacity: 0;
+}
+
+.toggle-menu.active .line3 {
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+}
+
+nav {
+    background-color: var(--color-background);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 15px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar {
+    display: none;
+}
+
+.hidden-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+}
+
+.hidden-nav ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.hidden-nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+.hidden-nav ul li a:hover {
+
+    color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+
+
+    .main-header {
+        padding: 20px;
+        height: 40px;
+    }
+
+
+    .toggle-menu {
+        display: flex;
+    }
+
+    .hidden-nav {
+        display: none;
+    }
+
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-background);
+        padding-top: 10px;
+
+    }
+
+    #navbar.active {
+        display: flex;
+        position: sticky;
+        top: 80px;
+        animation: slideInRight 0.5s ease-in-out;
+        z-index: 150;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 90%;
+        padding: 15px 0px;
+        border-top: 1px solid var(--color-blue);
+    }
+
+    nav ul li:first-child {
+        border: none;
+
+    }
+
+    nav ul li a {
+        color: var(--color-dark);
+        font-weight: 500;
+    }
+
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .main-header {
+        background-color: #333;
+        color: white;
+
+    }
+
+
+
+    .logo {
+        color: var(--color-colombia-blue);
+    }
+
+
+    .toggle-menu span {
+        background-color: white;
+    }
+
+
+
+    nav {
+        background-color: #333;
+    }
+
+
+
+    nav ul li a {
+        color: white;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #FFF;
+    }
+
+    .hidden-nav ul li a:hover {
+
+        color: var(--color-colombia-blue);
+    }
+
+
+    .logo-img {
+        border: 1px solid #FFF;
+    }
+
+
+    @media (max-width: 768px) {
+
+
+        nav {
+
+            background-color: var(--color-darkmode-grey);
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid var(--color-darkmode-light-grey);
+        }
+
+
+        nav ul li a {
+            color: var(--color-background-deep);
+        }
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+
+
+    .main-header {
+        background-color: #FFF;
+        color: #000;
+        border-bottom: 3px solid #000;
+    }
+
+
+
+    .logo {
+        color: #000;
+    }
+
+
+    .toggle-menu span {
+        background-color: #000;
+    }
+
+
+
+    nav {
+        background-color: #FFF;
+    }
+
+
+
+    nav ul li a {
+        color: #000;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #000;
+    }
+
+    @media (max-width: 768px) {
+
+        header {
+            top: 83px;
+        }
+
+        nav {
+
+            background-color: #000;
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid #FFF;
+        }
+
+
+        nav ul li a {
+            color: #FFF;
+
+        }
+
+
+        nav ul li a:hover {
+            color: yellow;
+
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+
+/* =====================================================
+Reduce Motion
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    table,
+    header,
+    main h2,
+    #navbar.active {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+/* =====================================================
+tabindex
+===================================================== */
+

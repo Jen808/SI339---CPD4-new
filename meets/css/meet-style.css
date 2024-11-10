@@ -1,0 +1,1278 @@
+/* =====================================================
+Import
+===================================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+
+/* =====================================================
+Default color set
+===================================================== */
+
+:root {
+
+    --color-colombia-blue: #9BDDFF;
+    --color-dark: #213A57;
+    --color-medium: #0B6477;
+    --color-background: #DCF5FA;
+    --color-background-deep: #F0FCFE;
+    --color-hover: #04A0BC;
+    --color-green: #25A18E;
+    --color-lightgreen: #7AE582;
+    --color-blue: #00A5CF;
+
+
+    --color-darkmode-grey: #2D2D2D;
+    --color-darkmode-deepblue: #37393d;
+    --color-darkmode-dark-grey: #1a1a1a;
+    --color-darkmode-mid-grey: #242424;
+    --color-darkmode-header: #4a4a4a;
+    --color-darkmode-light-grey: #666666;
+    --color-darkmode-green: #43bfac;
+    --color-darkmode-blue: #22beda;
+
+}
+
+
+/* =====================================================
+Screen setting - Default: Light Mode
+===================================================== */
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+
+}
+
+a[href="#main"] {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    background: #FFF;
+    color: #000;
+    padding: 10px;
+    z-index: 100;
+}
+
+a[href="#main"]:focus {
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFF;
+        background-color: var(--color-darkmode-grey);
+    }
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    body {
+        color: #000;
+        background-color: #FFF;
+    }
+
+}
+
+
+
+
+/* =====================================================
+Navigation
+===================================================== */
+
+#inner-sec {
+    padding: 0;
+}
+
+#inner-sec ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    background-color: #FFF;
+
+
+
+}
+
+#inner-sec ul li {
+    width: 100%;
+    padding: 0.4em 0;
+    border: 1px solid var(--color-dark);
+    text-align: center;
+
+
+
+
+
+}
+
+#inner-sec ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+#inner-sec ul li a:hover {
+    color: var(--color-hover);
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    #inner-sec ul {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+    #inner-sec ul li {
+
+        border: 1px solid var(--color-darkmode-light-grey);
+
+    }
+
+
+
+
+    #inner-sec ul li a {
+        color: var(--color-colombia-blue);
+    }
+
+    #inner-sec ul li a:hover {
+        color: var(--color-colombia-blue);
+    }
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    #inner-sec ul {
+        background-color: #000;
+    }
+
+    #inner-sec ul li {
+        border-bottom: 1px solid #FFF;
+
+    }
+
+    #inner-sec ul li a {
+        color: #FFF;
+    }
+
+
+    #inner-sec ul li a:hover {
+        color: blue;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #inner-sec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #inner-sec ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+
+    }
+
+    #inner-sec ul li {
+        padding: 10px 0;
+    }
+}
+
+
+
+/* =====================================================
+Header
+===================================================== */
+
+header {
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+header h1 {
+    font-size: 1.5em;
+    font-weight: 600;
+    animation: tada 1s ease-in-out;
+
+}
+
+header a {
+    color: var(--color-dark);
+    animation: tada 1s ease-in-out;
+
+}
+
+header h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--color-dark);
+    animation: tada 1s ease-in-out;
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    header a {
+        color: var(--color-background-deep);
+    }
+
+    header h2 {
+        color: var(--color-blue);
+    }
+
+}
+
+
+@media (prefers-contrast: more) {
+    header a {
+        color: #000;
+    }
+
+    header h2 {
+        color: #000;
+    }
+
+}
+
+
+
+
+
+
+/* =====================================================
+Main content
+===================================================== */
+
+main {
+    padding: 1em;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-top: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+    animation: tada 1s ease-in-out;
+
+}
+
+
+.summary p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.4em;
+    background-color: #FFF;
+    padding: 1.6em;
+    animation: bounceInDown 1s ease-in-out;
+
+
+}
+
+.athlete {
+    font-weight: 700;
+}
+
+.summary time {
+    font-weight: 700;
+    color: var(--color-dark);
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .summary p {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+    h2 {
+        color: var(--color-colombia-blue);
+
+    }
+
+    a[href="#main"] {
+        color: #FFF;
+        background-color: #000;
+
+    }
+
+    .summary time {
+        color: var(--color-colombia-blue);
+
+    }
+
+
+
+}
+
+
+@media (prefers-contrast: more) {
+
+
+    .summary p {
+        background-color: #FFF;
+        color: #000;
+    }
+
+    h2 {
+        color: #000;
+    }
+
+    .summary time {
+        color: #000;
+
+    }
+
+    a[href="#main"] {
+        color: #000;
+
+    }
+
+
+
+}
+
+
+
+
+
+
+/* =====================================================
+Team Results
+===================================================== */
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+    font-size: 0.9em;
+    background-color: #FFF;
+
+}
+
+table tr:nth-child(even) {
+    background-color: var(--color-background-deep);
+}
+
+table td:nth-child(2) {
+    color: var(--color-dark);
+    font-weight: 500;
+}
+
+
+
+th,
+td {
+    padding: 1em 0.5em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: var(--color-dark);
+    color: #FFF;
+    font-weight: 700;
+}
+
+#athlete-sr-table,
+#athlete-result-table {
+    overflow-x: auto;
+}
+
+table td a {
+    font-size: 0.9em;
+    color: var(--color-colombia-blue);
+    text-decoration: none;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    table {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+    table tr:nth-child(even) {
+        background-color: var(--color-darkmode-grey);
+    }
+
+    th {
+        background-color: var(--color-darkmode-light-grey);
+    }
+
+    table td:nth-child(2) {
+        color: var(--color-colombia-blue);
+        font-weight: 500;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--color-darkmode-light-grey);
+    }
+
+}
+
+
+@media (prefers-contrast: more) {
+
+
+    table {
+        background-color: #FFF;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #FFF;
+    }
+
+    th {
+        background-color: #000;
+        color: #FFF;
+    }
+
+    table td:nth-child(2) {
+        color: #000;
+        font-weight: 500;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+    }
+
+}
+
+
+
+
+
+/* =====================================================
+Individual results
+===================================================== */
+
+#individual-results .athlete {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0;
+    text-align: center;
+    padding: 0.8em;
+    border-radius: 1em;
+    background-color: #FFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-bottom: 0;
+    height: 320px;
+}
+
+#individual-results .athlete figure {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#individual-results .athlete img {
+
+    height: 250px;
+    width: auto;
+    border-radius: 1em;
+    margin-bottom: 5px;
+}
+
+#individual-results .athlete figcaption {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 5px;
+    width: 250px;
+    text-align: left;
+}
+
+.athlete dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 3em; */
+    width: 40%;
+    height: 190px;
+    text-align: left;
+    background-color: var(--color-colombia-blue);
+    color: #000;
+    border-radius: 0em 1em 1em 0em;
+
+
+}
+
+.athlete dt {
+    font-weight: 500;
+    padding: 20px;
+
+}
+
+.athlete dd {
+    margin: 0;
+    text-align: right;
+    padding: 20px;
+
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    #individual-results .athlete {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+    .athlete dl {
+        color: #FFF;
+        background-color: var(--color-darkmode-header);
+
+    }
+
+
+
+
+
+}
+
+
+@media (prefers-contrast: more) {
+
+
+    #individual-results .athlete {
+        background-color: #FFF;
+    }
+
+    .athlete dl {
+        color: #000;
+        background-color: #FFF;
+    }
+
+    #individual-results .athlete {
+
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+
+    #individual-results .athlete {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0;
+        text-align: center;
+        padding: 0.8em;
+        border-radius: 1em;
+        background-color: #FFF;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding-bottom: 0;
+
+    }
+
+    #individual-results .athlete figure {
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #individual-results .athlete img {
+        width: 10em;
+        height: auto;
+        border-radius: 1em;
+        margin-bottom: 5px;
+    }
+
+    #individual-results .athlete figcaption {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-top: 5px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .athlete dl {
+        height: 140px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 0;
+        text-align: left;
+        padding: 0.8em;
+        background-color: var(--color-colombia-blue);
+        color: #000;
+        border-radius: 0em 0em 1em 1em;
+
+    }
+
+    .athlete dt {
+        font-weight: 500;
+        padding: 10px 20px;
+    }
+
+    .athlete dd {
+        margin: 0;
+        text-align: right;
+        padding: 10px 20px;
+
+    }
+
+    @media (prefers-color-scheme: dark) {
+
+        #individual-results .athlete {
+
+            background-color: var(--color-darkmode-dark-grey);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+
+
+
+        .athlete dl {
+
+            background-color: var(--color-darkmode-header);
+            color: #FFF;
+
+
+        }
+
+
+
+
+
+    }
+
+
+
+
+
+}
+
+
+
+/* =====================================================
+gallery
+===================================================== */
+#gallery {
+    padding: 10px;
+    background-color: var(--color-background-deep);
+    border-radius: 1em;
+
+}
+
+
+#gallery {
+    display: block;
+    justify-items: center;
+}
+
+#gallery img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 0.3em;
+    margin: 0.2em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+#gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 8px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    #gallery {
+        background-color: var(--color-darkmode-dark-grey);
+    }
+
+
+}
+
+
+@media (prefers-contrast: more) {
+
+    #gallery {
+        background-color: #FFF;
+    }
+
+
+}
+
+
+
+
+
+/* =====================================================
+Footer 
+===================================================== */
+
+footer {
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding-bottom: 0.8em;
+}
+
+footer a {
+    color: var(--color-medium);
+    font-weight: 500;
+}
+
+footer address {
+    line-height: 1.4em !important;
+
+}
+
+footer a:hover {
+    color: var(--color-hover);
+}
+
+footer a[aria-label="Instagram"] {
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    footer {
+        background-color: var(--color-darkmode-dark-grey);
+        color: var(--color-colombia-blue);
+
+    }
+
+
+    footer a {
+        color: #FFF;
+    }
+
+
+    footer a:hover {
+        color: var(--color-hover);
+    }
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+    footer {
+        background-color: #000;
+        color: #FFF;
+    }
+
+
+    footer a {
+        color: #FFF
+    }
+
+
+    footer a:hover {
+        color: blue;
+    }
+
+}
+
+
+
+
+
+/* =====================================================
+FAB Icon
+===================================================== */
+
+
+body::before {
+    content: "\f002";
+    font-family: 'FontAwesome';
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+body::after {
+    content: "\f0b0";
+    font-family: 'FontAwesome';
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (prefers-contrast: more) {
+    body::before {
+        background-color: #000;
+        color: white;
+        border: 1px solid #FFF;
+    }
+
+    body::after {
+        background-color: #000;
+        color: white;
+        border: 1px solid #FFF;
+    }
+
+
+}
+
+
+/* =====================================================
+Burger Menu
+===================================================== */
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: var(--color-colombia-blue);
+    color: var(--color-dark);
+    position: sticky;
+    top: 0;
+    height: 100px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #000;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+    color: var(--color-dark);
+}
+
+.logo li {
+    list-style: none;
+}
+
+.toggle-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}
+
+.toggle-menu span {
+    height: 3px;
+    width: 35px;
+    background-color: var(--color-dark);
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+.toggle-menu.active .line1 {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.toggle-menu.active .line2 {
+    opacity: 0;
+}
+
+.toggle-menu.active .line3 {
+    transform: rotate(-45deg) translate(7.5px, -7.5px);
+}
+
+nav {
+    background-color: var(--color-background);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0 15px;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    list-style-type: none;
+
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar {
+    display: none;
+}
+
+.hidden-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 26px;
+    list-style: none;
+}
+
+.hidden-nav ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.hidden-nav ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 600;
+}
+
+.hidden-nav ul li a:hover {
+    text-decoration: none;
+    color: var(--color-hover);
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .main-header {
+        padding: 20px;
+        height: 40px;
+    }
+
+
+    .toggle-menu {
+        display: flex;
+    }
+
+    .hidden-nav {
+        display: none;
+    }
+
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-background);
+        padding-top: 10px;
+
+    }
+
+    #inner-sec {
+        display: flex;
+    }
+
+    #navbar.active {
+        display: flex;
+        position: sticky;
+        top: 80px;
+        animation: slideInRight 0.5s ease-in-out;
+        z-index: 150;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 90%;
+        padding: 0 5%;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid var(--color-blue);
+    }
+
+    #navbar ul li:first-child {
+        border: none;
+
+    }
+
+    nav ul li a {
+        color: var(--color-dark);
+        font-weight: 500;
+    }
+
+
+
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .main-header {
+        background-color: #333;
+        color: white;
+
+    }
+
+
+
+    .logo {
+        color: var(--color-colombia-blue);
+    }
+
+
+    .toggle-menu span {
+        background-color: white;
+    }
+
+
+
+    nav {
+        background-color: #333;
+    }
+
+
+
+    nav ul li a {
+        color: white;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #FFF;
+    }
+
+    .logo-img {
+        border: 1px solid #FFF;
+    }
+
+
+    @media (max-width: 768px) {
+
+
+        nav {
+
+            background-color: var(--color-darkmode-grey);
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid var(--color-darkmode-light-grey);
+        }
+
+
+        nav ul li a {
+            color: var(--color-background-deep);
+        }
+
+
+    }
+
+
+
+
+
+
+}
+
+
+
+@media (prefers-contrast: more) {
+
+
+    .main-header {
+        background-color: #FFF;
+        color: #000;
+        border-bottom: 3px solid #000;
+    }
+
+
+
+    .logo {
+        color: #000;
+    }
+
+
+    .toggle-menu span {
+        background-color: #000;
+    }
+
+
+
+    nav {
+        background-color: #FFF;
+    }
+
+
+
+    nav ul li a {
+        color: #000;
+    }
+
+
+    .hidden-nav ul li a {
+        color: #000;
+    }
+
+    @media (max-width: 768px) {
+
+        header {
+            top: 83px;
+        }
+
+        nav {
+
+            background-color: #000;
+
+        }
+
+        nav ul li {
+
+            border-top: 1px solid #FFF;
+        }
+
+
+        nav ul li a {
+            color: #FFF;
+
+        }
+
+
+        nav ul li a:hover {
+            color: yellow;
+
+        }
+
+
+
+    }
+
+
+
+}
+
+
+
+
+/* =====================================================
+Reduce Motion
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    table,
+    header,
+    header h1,
+    header a,
+    header h2,
+    main h2,
+    #navbar.active,
+    .summary p,
+    h2 {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+/* =====================================================
+tabindex
+===================================================== */
+
