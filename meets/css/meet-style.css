@@ -692,7 +692,49 @@ Individual results
 
 
 
+
+
+
     }
+
+
+    @media (prefers-contrast: more) {
+
+        #individual-results .athlete {
+
+            background-color: #FFF;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+        }
+
+        
+        #individual-results .athlete figcaption {
+
+            color: #000;
+
+
+        }
+
+
+
+
+
+        .athlete dl {
+
+            background-color: #000;
+            color: #FFF;
+
+
+        }
+
+
+
+
+    }
+
+
+
 
 
 
@@ -1275,4 +1317,3 @@ Reduce Motion
 /* =====================================================
 tabindex
 ===================================================== */
-
