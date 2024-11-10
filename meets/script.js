@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    images.forEach((img) => {
       img.onerror = () => {
-         img.src = '../images/profiles/default_image.png';
+         img.src = '../images/profiles/default_image.jpg';
       };
    });
 });
